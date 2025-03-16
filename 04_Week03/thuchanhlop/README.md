@@ -3,6 +3,6 @@
 
 ## Ảnh Demo
 
-[demo1] C:\code\BaiTapVeNha_Mobile\04_Week03\thuchanhlop\assets\demo1.png
+![Ảnh Demo1](./assets/demo1.png)
 
-[demo2] C:\code\BaiTapVeNha_Mobile\04_Week03\thuchanhlop\assets\demo2.png
+![Ảnh Demo2](./assets/demo2.png)

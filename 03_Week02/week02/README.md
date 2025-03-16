@@ -3,5 +3,5 @@
 
 ## Ảnh Demo
 
-C:\code\BaoTap_Mobile\03_Week02\week02\assets\demo.png
+![Ảnh Demo1](./assets/demo.png)
 
