@@ -1,4 +1,6 @@
-## Bài tập môn lập trình thiết bị di động.
+# navigation_lazycolumn
+
+A new Flutter project.
 
 ## Getting Started
 

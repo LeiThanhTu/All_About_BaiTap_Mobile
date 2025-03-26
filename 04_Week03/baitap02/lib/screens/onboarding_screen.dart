@@ -12,6 +12,7 @@ class OnboardingScreen extends StatefulWidget {
 class _OnboardingScreenState extends State<OnboardingScreen> {
   final PageController _pageController = PageController();
   int _currentPage = 0;
+  
 
   final List<OnboardingPage> _pages = [
     OnboardingPage(
@@ -23,17 +24,20 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     OnboardingPage(
       image: 'assets/bro.png',
       title: 'Easy Time Management',
-      description: 'With management based on priority and daily tasks, it will give you convenience in managing and determining the tasks that must be done first.',
+      description:
+          'With management based on priority and daily tasks, it will give you convenience in managing and determining the tasks that must be done first.',
     ),
     OnboardingPage(
       image: 'assets/bro2.png',
       title: 'Increase Work Effectiveness',
-      description: 'Time management and the determination of more important tasks will give your job statistics better and always improve.',
+      description:
+          'Time management and the determination of more important tasks will give your job statistics better and always improve.',
     ),
     OnboardingPage(
       image: 'assets/bro3.png',
       title: 'Reminder Notification',
-      description: 'The advantage of this application is that it also provides reminders for you so you don\'t forget to keep doing your assignments well and according to the time you have set.',
+      description:
+          'The advantage of this application is that it also provides reminders for you so you don\'t forget to keep doing your assignments well and according to the time you have set.',
       isLast: true,
     ),
   ];
@@ -84,13 +88,14 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     onPressed: () {
                       _pageController.jumpToPage(_pages.length - 1);
                     },
-                    child: const Text('skip', 
+                    child: const Text(
+                      'skip',
                       style: TextStyle(color: Colors.blue),
                     ),
                   ),
                 ),
               ),
-              
+
             // Progress indicator
             if (_currentPage > 0)
               Padding(
@@ -105,7 +110,10 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                         height: 8,
                         width: 8,
                         decoration: BoxDecoration(
-                          color: _currentPage - 1 == index ? Colors.blue : Colors.blue.withOpacity(0.2),
+                          color:
+                              _currentPage - 1 == index
+                                  ? Colors.blue
+                                  : Colors.blue.withOpacity(0.2),
                           shape: BoxShape.circle,
                         ),
                       ),
@@ -113,7 +121,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   ),
                 ),
               ),
-              
+
             // Page content
             Expanded(
               child: PageView.builder(
@@ -129,31 +137,38 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 },
               ),
             ),
-            
+
             // Navigation buttons
             if (_currentPage > 0)
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 16.0),
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 24.0,
+                  vertical: 16.0,
+                ),
                 child: Row(
-                  mainAxisAlignment: _currentPage > 1 
-                      ? MainAxisAlignment.spaceBetween
-                      : MainAxisAlignment.center,
+                  mainAxisAlignment:
+                      _currentPage > 1
+                          ? MainAxisAlignment.spaceBetween
+                          : MainAxisAlignment.center,
                   children: [
                     // Back button (shown only on pages 2 and 3)
                     if (_currentPage > 1)
                       Container(
                         width: 48,
-                        height: 48, 
+                        height: 48,
                         decoration: const BoxDecoration(
                           shape: BoxShape.circle,
                           color: Colors.blue,
                         ),
                         child: IconButton(
-                          icon: const Icon(Icons.arrow_back, color: Colors.white),
+                          icon: const Icon(
+                            Icons.arrow_back,
+                            color: Colors.white,
+                          ),
                           onPressed: _goToPreviousPage,
                         ),
                       ),
-                    
+
                     // Next/Get Started button
                     SizedBox(
                       width: _currentPage < _pages.length - 1 ? 200 : 240,
@@ -168,7 +183,9 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                           ),
                         ),
                         child: Text(
-                          _currentPage < _pages.length - 1 ? 'Next' : 'Get Started',
+                          _currentPage < _pages.length - 1
+                              ? 'Next'
+                              : 'Get Started',
                           style: const TextStyle(
                             fontSize: 16,
                             fontWeight: FontWeight.bold,
