@@ -1,8 +1,6 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.thanhtu.mobileapp.mobileproject">
-
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <application
-        android:label="firebase_authen"
+        android:label="mvvn"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
@@ -44,7 +42,4 @@
             <data android:mimeType="text/plain"/>
         </intent>
     </queries>
-    <uses-sdk tools:overrideLibrary="io.flutter.plugins.firebase.auth" />
-    <uses-permission android:name="android.permission.INTERNET"/>
-
 </manifest>
